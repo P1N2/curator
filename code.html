@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Curator Studio | Digital Product Excellence</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#404251",
+              "primary-container": "#a4c1ff",
+              "outline": "#767c7e",
+              "on-primary-fixed": "#002658",
+              "primary-dim": "#0050ab",
+              "tertiary-fixed-dim": "#f0beae",
+              "on-background": "#2e3335",
+              "inverse-primary": "#4b8eff",
+              "tertiary": "#7c5649",
+              "surface": "#f8f9fa",
+              "error": "#ac3434",
+              "on-error": "#fff7f6",
+              "primary": "#005bc2",
+              "on-primary-fixed-variant": "#004291",
+              "on-tertiary-fixed": "#503025",
+              "secondary-container": "#e6e6fa",
+              "on-surface": "#2e3335",
+              "surface-bright": "#f8f9fa",
+              "tertiary-dim": "#6f4a3e",
+              "surface-tint": "#005bc2",
+              "surface-dim": "#d5dbdd",
+              "error-container": "#f56965",
+              "primary-fixed-dim": "#8eb3ff",
+              "inverse-surface": "#0c0f10",
+              "secondary": "#5c5e6e",
+              "surface-container-high": "#e5e9eb",
+              "outline-variant": "#aeb3b5",
+              "error-dim": "#70030f",
+              "on-surface-variant": "#5a6062",
+              "surface-container-highest": "#dee3e5",
+              "on-tertiary-container": "#664237",
+              "surface-container-low": "#f2f4f5",
+              "on-secondary-container": "#525464",
+              "primary-fixed": "#a4c1ff",
+              "background": "#f8f9fa",
+              "on-tertiary": "#fff7f5",
+              "on-secondary": "#faf8ff",
+              "on-primary": "#f9f8ff",
+              "on-secondary-fixed-variant": "#5c5e6e",
+              "inverse-on-surface": "#9b9d9e",
+              "on-error-container": "#65000b",
+              "tertiary-container": "#ffccbc",
+              "surface-variant": "#dee3e5",
+              "secondary-fixed-dim": "#d8d8ec",
+              "tertiary-fixed": "#ffccbc",
+              "secondary-fixed": "#e6e6fa",
+              "on-primary-container": "#003a80",
+              "on-tertiary-fixed-variant": "#704b3f",
+              "secondary-dim": "#505262",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#ebeef0"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-header {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #005bc2 0%, #a4c1ff 100%);
+      }
+      .asymmetric-shape {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-slate-900/10 shadow-sm transition-all duration-300">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-extrabold tracking-tighter text-slate-900">The Curator Studio</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8 font-manrope font-bold text-sm tracking-tight">
+<a class="text-cyan-500 font-bold border-b-2 border-cyan-500 py-1" href="#">Work</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors py-1" href="#">Services</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors py-1" href="#">About</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors py-1" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-headline text-sm font-bold shadow-lg shadow-primary/20 scale-95 active:scale-90 transition-transform">
+                    Start a Project
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold leading-tight text-inverse-surface tracking-tighter mb-8">
+                        Des produits digitaux conçus pour renforcer votre <span class="text-primary italic">communauté</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-lg mb-12 leading-relaxed">
+                        Nous fusionnons l'artisanat du design et la précision technique pour créer des expériences qui engagent, fidélisent et inspirent.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="hero-gradient text-white px-8 py-4 rounded-full font-headline font-bold text-lg shadow-xl shadow-primary/25 hover:translate-y-[-2px] transition-all">
+                            Découvrir nos produits
+                        </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-highest transition-colors">
+                            Voir le portfolio
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-3xl blur-3xl group-hover:bg-primary-container/30 transition-all duration-700"></div>
+<img alt="Studio Digital Illustration" class="relative rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700 object-cover aspect-[4/3] w-full border-8 border-white" data-alt="Modern high-end digital product mockup displayed on a sleek glass tablet with vibrant UI elements and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0CWXDsljSOktwXrUkxGP_0o12QBdzwecd9jxRetRkub0fAEcvkfkUYgxn5mzqBmLxb5Z8UsEV3mgtdSGEk_1KNH3wW05s_TLPjjjMTHK3yex7tRg8SdPiDrrwejcltUE2zCinfe08DpNLOY0B4r3nJXBqAboSmJJ0rOF22EuAU89DEzPbSarsj2RdgwSdkSnV5bhqACEAQzJAgGptiIDQLtMrIZf0zVp51q23el2A5GZX50OXJOqR8lTZXsvpFvFFbz96-F-TI17z"/>
+</div>
+</div>
+</section>
+<!-- Section 2: Products Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline text-4xl font-extrabold text-inverse-surface mb-4">Nos Réalisations</h2>
+<p class="text-on-surface-variant max-w-md">Une sélection de nos outils digitaux les plus performants, conçus pour l'évolutivité.</p>
+</div>
+<div class="flex p-1 bg-surface-container rounded-full overflow-hidden border border-outline-variant/10">
+<button class="px-6 py-2 rounded-full text-sm font-bold bg-white shadow-sm text-primary">Tous</button>
+<button class="px-6 py-2 rounded-full text-sm font-bold text-on-surface-variant hover:text-on-surface transition-colors">SaaS</button>
+<button class="px-6 py-2 rounded-full text-sm font-bold text-on-surface-variant hover:text-on-surface transition-colors">Mobile</button>
+<button class="px-6 py-2 rounded-full text-sm font-bold text-on-surface-variant hover:text-on-surface transition-colors">Web</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Product One" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Minimalist mobile app interface showing community engagement metrics with soft blue and purple gradients" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3P1GKYYhl6BH8wqLk84rmrWVMLSw2XU_WlDKGNXGVQK4yf9lOLUsBIBilIWXgfLmY1dnU6wqvpWDGoHLwcQk63sdIn_wFCwWjmxQEEOFkc0ptS1HVyhpK-7TQ1OIrUZauXN7htEGexJw_o6e22iQy009tZa6vxbqI9LiE5IF4vBM6vYb948zV6V1qLgUCAy1jW4oBWDHf9ODwl7Kq3YGy4bR5gbSEvwRcbIRorRsY1-dtQ7OnWnNPyOFITU80Q-pE-uvegw2-yU7m"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold mb-2">Nexus App</h3>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">Plateforme de communication décentralisée pour les créateurs de contenu.</p>
+<button class="flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                                Voir la démo 
+                                <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Product Two" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Clean dashboard design with data visualization charts and elegant dark mode UI components" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbYwsFenWmeKBtUvZrogTVBNB6-vKCxFRzDS2Jh5dEk6aGwX9q7BrcmPl6dSuVmuo6FXvwc9dZ3ceWIWqmpkXTm_y9VKlOxAFl9SCh_gi06jiC6NMVeKfmn5DJWZv10NnZxC8UZQSvqyZcBFgdKUJjnOj-SVXADb40wg_9K2k4VmPPxgbIV8IM4sfXk6g7JV1bsL0rG8Ll4Hhm25c-evqvkuAKoul6mQE2vbJhydm8L9Xs3xMlYtnAna9tGXldQncpOLaQp08P2T_v"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold mb-2">Insight Dashboard</h3>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">Outil d'analyse prédictive pour anticiper les besoins de vos membres.</p>
+<button class="flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                                Voir la démo 
+                                <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Product Three" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Sleek laptop displaying a web application with editorial layout and high-quality photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDErbPuOjJ7fvBV81-qxuE29Llpe9MnUr8gjuPM3l6fvrN5l7dn05Tne-Mn0bqxt8XXi1xwHjSHvehsAWsQ9BOog8P1Ead74t5IoTA8q1bgkxOwWqxyJKYAkz13seP8WCgq2zP1xR_SSW2lc-SCCONjNglIv6SFG4hUVWZxoDEP5UkUabJW9KcJO4OJhIwvTFeHCchKnudbIDnRVLTh9pMA2w3qtjlc89GQ5nyLxg7B9EqW901sKKqoQ3BDbXtTNx707kW5pQgaLBo8"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold mb-2">Curate CMS</h3>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">Système de gestion de contenu headless ultra-rapide pour marques premium.</p>
+<button class="flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                                Voir la démo 
+                                <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Product Four" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Tablet interface showing a marketplace for digital assets with artistic illustrations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_eGpjLLOAPj5pSd3mGX1SP811iQeWaJ5rL3vpAi-cUPbzyABUlbu4qgSG6hkzlARjb7QgqDF4eP4d_vgK3kHD4mXe9SX5K2GmFJayjA4uwMAQ56jKvBAK6sMR_GtT454mG1c5CXmXSlIC_6zRTb8u4OMcWw2NQc5N56_9Q0O7neB8F7Axu4xlCBFdX8Yn5lTM8JftHRBAPEzsVwZd8fitnyk5xI2KGfj0Ujx1DZ6dASRpz6jC_U4ZwQFGQdwalVuqE0R9_viHWNi9"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold mb-2">Aura Shop</h3>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2">Expérience e-commerce immersive pour produits numériques exclusifs.</p>
+<button class="flex items-center gap-2 text-primary font-bold text-sm group/btn">
+                                Voir la démo 
+                                <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Features (Icon Cards) -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">Notre Approche</span>
+<h2 class="font-headline text-4xl font-extrabold mt-4">Conçu pour l'humain</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="p-10 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-colors">
+<div class="w-14 h-14 rounded-xl bg-primary-container/30 flex items-center justify-center text-primary mb-8">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Engagement Loyal</h3>
+<p class="text-on-surface-variant leading-relaxed">Créez des boucles de rétroaction positives qui incitent vos membres à revenir chaque jour naturellement.</p>
+</div>
+<div class="p-10 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-colors">
+<div class="w-14 h-14 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary mb-8">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Vitesse Radical</h3>
+<p class="text-on-surface-variant leading-relaxed">Des interfaces qui répondent instantanément, éliminant toute friction entre l'intention et l'action.</p>
+</div>
+<div class="p-10 rounded-2xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container transition-colors">
+<div class="w-14 h-14 rounded-xl bg-secondary-container/50 flex items-center justify-center text-secondary mb-8">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Confiance Totale</h3>
+<p class="text-on-surface-variant leading-relaxed">Une architecture sécurisée et transparente qui respecte la vie privée de votre communauté.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Testimonials (Bento Carousel Style) -->
+<section class="py-24 bg-inverse-surface text-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1 flex flex-col justify-center">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-8 tracking-tighter">Ils nous font confiance.</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-surface/20 flex items-center justify-center hover:bg-surface hover:text-inverse-surface transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-surface/20 flex items-center justify-center hover:bg-surface hover:text-inverse-surface transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Jean Dupont" class="w-14 h-14 rounded-full object-cover grayscale hover:grayscale-0 transition-all" data-alt="Portrait of a young creative professional man in a bright studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvenpN977UFlSNmnGkhdSH1i_3GiML07hUKFDRf8JP2zXjgL4OyEPmRMcM6u1Joc73gk88a2KqyiU8E3yhMbgRn3foSiR7C0ijibGMKHLvYD6nYDJhiyuKeH1nPfCIGg5zfNyx7KN6GWpZz217QjTh9Ynt2EE8xl91hfG9tbiNP4h821CHibRqbu_8SVtZ3iO65qmCwqihmBTMQJ3i6ERYisxmb8QqCUL2Y9cU6rzzJCDYtEOYVrELKz04yqndG5c9GkznIJbF9ydQ"/>
+<div>
+<p class="font-bold">Jean Dupont</p>
+<p class="text-xs text-outline-variant uppercase tracking-widest">CEO, TechVibe</p>
+</div>
+</div>
+<p class="text-lg italic text-surface-container leading-relaxed">"Le Studio Curator a transformé notre vision complexe en une application intuitive. Nos utilisateurs adorent la fluidité."</p>
+</div>
+<div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+<div class="flex items-center gap-4 mb-6">
+<img alt="Sarah L." class="w-14 h-14 rounded-full object-cover grayscale hover:grayscale-0 transition-all" data-alt="Professional woman smiling in a high-end office environment with natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZWSRoU5iQuvya6vmlYNnNKleP-Kt2coTnIBgcYM95ku677b0oS-JUNIgWKn3OOJHjEHxzX-HFglwk651LLeCSACZXHr6xgedyos8Y-zZHJQkK3yUvpTHJDXp1lVw49m_bv2Qv18GRKwoo2XwS5y1EZiONCioLNqHR4WfZCO6nLFB9CHrOGxUtsz7SQZnEeA8zGGc_6Q2rlFHvT0XfB6FaFIj5qR69SbVVRD1oWf7K0uSzKQ9o5wZ-n3AI1CXtEHgZF9XSQN7GI_OM"/>
+<div>
+<p class="font-bold">Sarah Levallois</p>
+<p class="text-xs text-outline-variant uppercase tracking-widest">Directrice Produit, ArtHub</p>
+</div>
+</div>
+<p class="text-lg italic text-surface-container leading-relaxed">"Une attention aux détails rarement vue ailleurs. Ils ne se contentent pas de coder, ils créent de l'émotion."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Blog/Resources -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<h2 class="font-headline text-4xl font-extrabold text-inverse-surface">Le Journal Studio</h2>
+<a class="text-primary font-bold border-b border-primary/20 hover:border-primary transition-all pb-1" href="#">Tout lire</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<article class="group cursor-pointer">
+<div class="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-surface-container">
+<img alt="Blog Post 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern workspace with minimalist design, featuring a laptop and a small plant, top-down view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMPQwruCygrFjdV0YcuQ-7UkRJrRhPcOSlTVJhnP-Vp_SovyndRnjQ60PvdQAH2mkLIojqXjVtR0q0ESJ1gYSajI-FIBWafGTM7atkOe3NpdZzuF8DRVT40th5tCqhbpNYo2CcnjbAJ-pGS3rae5HR9k0Nm9hljRPoN9bDR0wgGC2FrRd-Qn73n9ztlyHPe9EjMMQAxxB7DpWsm7hu8PWnGPqgwgnrgbKK6KXDywkVaSnEfrVjyyDtQC8MYyTsq7u1gGUm1DSAsaV5"/>
+</div>
+<div class="flex items-center gap-4 mb-3">
+<span class="text-xs font-bold text-primary uppercase tracking-tighter">Design Strategy</span>
+<span class="text-xs text-on-surface-variant">5 min read</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 group-hover:text-primary transition-colors">L'asymétrie comme levier de conversion</h3>
+<p class="text-on-surface-variant text-sm mb-4">Pourquoi les interfaces trop parfaites peuvent parfois paraître froides et comment y remédier.</p>
+<span class="text-sm font-bold flex items-center gap-1">Lire plus <span class="material-symbols-outlined text-sm">north_east</span></span>
+</article>
+<article class="group cursor-pointer">
+<div class="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-surface-container">
+<img alt="Blog Post 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract lines of code on a high-resolution screen with neon reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLscEXBSBDF5W25LFnS_QyGxqbm31HEZI4JyiD9u4mUIYNEEg9eXHq_Y_hgB1bhiJg1SjKRNEkTye_5p2MUCd08_3i75xH94dQBuAbrk-0kstwaXF1qMfZXaJyj5wZYHRstoU2ySOaNJhxqeUtipx02K9s_FGUmBayN9VNMTj6XZsbGuLiW92AoM2skobB0gXVignVhB-IHtEkNnem3WTlKg6xwcTvDJ1nFidEzTvyjfYnGaxSAoSgxppfeiSgb6wcWRdVmmu58mZm"/>
+</div>
+<div class="flex items-center gap-4 mb-3">
+<span class="text-xs font-bold text-primary uppercase tracking-tighter">Development</span>
+<span class="text-xs text-on-surface-variant">8 min read</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Architecture Headless en 2024</h3>
+<p class="text-on-surface-variant text-sm mb-4">Les avantages d'une séparation nette entre votre contenu et votre interface utilisateur.</p>
+<span class="text-sm font-bold flex items-center gap-1">Lire plus <span class="material-symbols-outlined text-sm">north_east</span></span>
+</article>
+<article class="group cursor-pointer">
+<div class="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-surface-container">
+<img alt="Blog Post 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Group of diverse creative people collaborating around a wooden table in a sunlit loft" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXM7f7Pl0QxHEtuUYUW2_leFqZfx131LztY7puA4wfAZ1pPRn5ikr4XtfLHR4oxyt4LrfX7o0I3_iXW0vTDGNDdenvCATFVtOM0NFdEHocjS1dI2wAi-uLAlaWDZq83eswi8PwuDlRYipp18KSHfU4_73Ka3Z7JXLsHDoOZD1j2r97GNf6dh2Vwi1mzmgBhrumGeWm7tLVuV726OQjsqw1HxJZZANZqCV1ZbQD66nlUq3HuGLyWSdpqJERbJmfLQEd_YUJ-wnG5QZg"/>
+</div>
+<div class="flex items-center gap-4 mb-3">
+<span class="text-xs font-bold text-primary uppercase tracking-tighter">Community</span>
+<span class="text-xs text-on-surface-variant">4 min read</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Humaniser le digital</h3>
+<p class="text-on-surface-variant text-sm mb-4">Techniques pour renforcer le sentiment d'appartenance dans une communauté virtuelle.</p>
+<span class="text-sm font-bold flex items-center gap-1">Lire plus <span class="material-symbols-outlined text-sm">north_east</span></span>
+</article>
+</div>
+</div>
+</section>
+<!-- Section 6: Pricing -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl font-extrabold mb-4">Investissez dans la Qualité</h2>
+<p class="text-on-surface-variant">Des solutions adaptées à chaque étape de votre croissance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Basic -->
+<div class="p-8 rounded-2xl border border-outline-variant/20 flex flex-col hover:border-primary/30 transition-all">
+<h3 class="font-headline text-xl font-bold mb-2">Basic</h3>
+<div class="mb-8">
+<span class="text-4xl font-extrabold">$2,500</span>
+<span class="text-on-surface-variant text-sm">/projet</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Audit de design</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Maquette 5 pages</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Développement React</li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant/50 line-through"><span class="material-symbols-outlined text-lg">cancel</span> Maintenance 24/7</li>
+</ul>
+<button class="w-full py-4 rounded-full font-bold text-primary border border-primary/20 hover:bg-primary/5 transition-colors">Choisir Basic</button>
+</div>
+<!-- Pro -->
+<div class="p-8 rounded-2xl bg-inverse-surface text-surface flex flex-col shadow-2xl scale-105 z-10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-xl font-bold">Pro</h3>
+<span class="bg-primary text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Populaire</span>
+</div>
+<div class="mb-8">
+<span class="text-4xl font-extrabold">$5,800</span>
+<span class="text-surface/60 text-sm">/projet</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary-fixed text-lg">check_circle</span> Système complet UI/UX</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary-fixed text-lg">check_circle</span> CMS Intégré</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary-fixed text-lg">check_circle</span> Optimisation SEO &amp; Perf</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary-fixed text-lg">check_circle</span> Support prioritaire 6 mois</li>
+</ul>
+<button class="w-full py-4 rounded-full font-bold bg-primary text-on-primary shadow-lg shadow-primary/20 hover:translate-y-[-2px] transition-all">Démarrer avec Pro</button>
+</div>
+<!-- Enterprise -->
+<div class="p-8 rounded-2xl border border-outline-variant/20 flex flex-col hover:border-primary/30 transition-all">
+<h3 class="font-headline text-xl font-bold mb-2">Enterprise</h3>
+<div class="mb-8">
+<span class="text-4xl font-extrabold">Custom</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Équipe dédiée 24/7</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Architecture Scale-Out</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Sécurité niveau bancaire</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Marque Blanche Totale</li>
+</ul>
+<button class="w-full py-4 rounded-full font-bold text-primary border border-primary/20 hover:bg-primary/5 transition-colors">Contacter Ventes</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Contact -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-surface-container-low rounded-[2rem] p-12 md:p-20 grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline text-5xl font-extrabold text-inverse-surface mb-8 tracking-tighter">Prêt à transformer votre communauté ?</h2>
+<p class="text-lg text-on-surface-variant mb-12">Parlons de votre prochain grand projet. Remplissez le formulaire ou envoyez-nous un e-mail directement.</p>
+<div class="space-y-6 mb-12">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<span class="font-bold text-lg">hello@curator.studio</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<span class="font-bold text-lg">Paris, France</span>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<img alt="Insta" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb6ZAoh_JpYiSCx4SOd8Q0vVdvqyfebH7ZGHyQdAklN7my1l_Tw7yNPpvgGb14qhV6GgHn8fM3FuVkGG3wOcbRCa76VUVIdfFG7Ow_XvvROpvzb-9etYYgLcUSTtr-F8TYMtC1HALugb-Oq_1gVHlpIVJfo03HyyFWYldFZiCclWbGDMpTziI30UF6FTqmIgjfTN86ak_MoyC84I5Fk1VXEGX_Q3KhBltrbWsh8Iw7qZaf9e6qMkD_jrpxD2MjuCJM5krkhE4MD6JP"/>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<img alt="LinkedIn" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4NT1kY6LKKMmRLfl8oIIBAQit8mXFSvpNrnhWIxsf09Pd4eRXmutVJLo9JgfLV2nP5XVLBRbnrw1qUtsGnbrJZ2AnOt7WcaXkLlJrhcxrlIm7GHzeDq8CB9JMO1UDtjoZdYH6Nsatq6-azFhygLn8gIAyBtxPr6WYflw9x5AziRNMVk0ZIyZV8y2cHQFqQN_I_lf-rx9HvzWISZcwmssCRe7XwZ5gwQd7RuJM0qhw1WyvCZpBSAcSaP00lZcUtfGvHLlTnvN8VMPP"/>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<img alt="Twitter" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYtfI1DFmHE0KJrT2DMDpT5D6gzqescut3TZ3hMyKau4erOAvUJnSoCssX6ugtzhUsUc2gr6SsLFL3P8EYJcMcU2Tki5Br-GC-9MJKqwj32zNc4_wyXvNn2OmwqOdU-ESBHNIi4Qq44KJfIh3c2chSwDlazrXuA8ywWigoGuLL8_UQgaaz8iW6G5dTGZAduPjBFSckHFKaNXrRaPEnCSR5vIbyKVab0e5MrG2vADiztg17PNxxPKk5b_P4wb4OfRaFfDLwzUuaOMBE"/>
+</a>
+</div>
+</div>
+<div class="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50">
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Nom Complet</label>
+<input class="w-full px-6 py-4 bg-surface-container rounded-xl border-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Alexandre Martin" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">E-mail</label>
+<input class="w-full px-6 py-4 bg-surface-container rounded-xl border-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="alex@exemple.com" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-2">Votre Message</label>
+<textarea class="w-full px-6 py-4 bg-surface-container rounded-xl border-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Dites-nous tout..." rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-primary text-white font-headline font-bold text-lg rounded-xl shadow-lg shadow-primary/30 hover:shadow-xl transition-all scale-95 active:scale-90">Envoyer le Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-slate-50 border-t border-slate-200">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-bold text-slate-800">The Curator Studio</div>
+<p class="text-slate-500 text-sm max-w-xs leading-relaxed">Artisans du digital créant des expériences mémorables pour les marques de demain.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<p class="font-inter text-xs uppercase tracking-widest text-slate-900 font-bold">Studio</p>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-cyan-500 transition-colors text-xs uppercase tracking-widest" href="#">Work</a></li>
+<li><a class="text-slate-500 hover:text-cyan-500 transition-colors text-xs uppercase tracking-widest" href="#">About</a></li>
+<li><a class="text-slate-500 hover:text-cyan-500 transition-colors text-xs uppercase tracking-widest" href="#">Instagram</a></li>
+<li><a class="text-slate-500 hover:text-cyan-500 transition-colors text-xs uppercase tracking-widest" href="#">LinkedIn</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="font-inter text-xs uppercase tracking-widest text-slate-900 font-bold">Légal</p>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-cyan-500 transition-colors text-xs uppercase tracking-widest" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-cyan-500 transition-colors text-xs uppercase tracking-widest" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-6 flex flex-col items-start md:items-end">
+<p class="text-xs text-slate-500 text-right leading-relaxed">© 2024 The Curator Studio. All rights reserved. Precision in every pixel.</p>
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-100 px-4 py-2 rounded-full">
+<span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Available for new projects
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
